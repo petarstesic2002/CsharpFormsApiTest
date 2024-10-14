@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kVJ+K7G65NE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Petar\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

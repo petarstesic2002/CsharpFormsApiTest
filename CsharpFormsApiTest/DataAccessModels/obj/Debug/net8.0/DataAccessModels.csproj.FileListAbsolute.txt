@@ -1,0 +1,14 @@
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\bin\Debug\net8.0\DataAccessModels.deps.json
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\bin\Debug\net8.0\DataAccessModels.runtimeconfig.json
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\bin\Debug\net8.0\DataAccessModels.dll
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\bin\Debug\net8.0\DataAccessModels.pdb
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.csproj.AssemblyReference.cache
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.AssemblyInfoInputs.cache
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.AssemblyInfo.cs
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.csproj.CoreCompileInputs.cache
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.dll
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\refint\DataAccessModels.dll
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.pdb
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.genruntimeconfig.cache
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\ref\DataAccessModels.dll
