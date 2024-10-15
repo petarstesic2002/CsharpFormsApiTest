@@ -6,7 +6,7 @@
 ### Database is filled with some test data
 
 # Disable break on Validation Exceptions (optional)
-There are `FluentValidation` validators for insert and update that throw `ValidationException` if the validation fails, because of that the project has a breakpoint if the exception if the validation is thrown. (This only happens if you run the project in Visual Studio, not through cmd)
+There are `FluentValidation` validators for insert and update that throw `ValidationException` if the validation fails, because of that the project has a breakpoint if the exception if the validation is thrown. (This only happens if you run the project in Visual Studio, not through terminal)
 
 ### Solution is set to multiple startup projects (API and GUI)
 
