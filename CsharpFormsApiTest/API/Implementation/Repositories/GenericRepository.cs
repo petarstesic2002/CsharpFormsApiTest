@@ -20,7 +20,7 @@ namespace API.Implementation.Repositories
         }
         public IEnumerable<T> GetAll()
         {
-            return _dbSet.ToList();
+            return _dbSet;
         }
         public T GetById(int id)
         {

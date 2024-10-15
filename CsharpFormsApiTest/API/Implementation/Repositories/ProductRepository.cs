@@ -4,6 +4,7 @@ using API.Implementation.Validators;
 using DataAccessModels;
 using DataAccessModels.Entities;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -28,7 +29,7 @@ namespace API.Implementation.Repositories
             int perPage = search.PerPage.HasValue ? (int)Math.Abs((double)search.PerPage) : 8;
             int page = search.Page.HasValue ? (int)Math.Abs((double)search.Page) : 1;
             int skip = perPage * (page - 1);
-            int totalPages = totalCount > perPage ? (int)Math.Floor((double)totalCount / perPage) : 1;
+            int totalPages = totalCount > perPage ? (int)Math.Ceiling((double)totalCount / perPage) : 1;
             query = query.Skip(skip).Take(perPage);
 
             var response = new PagedResponse<ProductWithCategories>
@@ -41,11 +42,11 @@ namespace API.Implementation.Repositories
                     Price = x.Price,
                     StockQuantity = x.StockQuantity,
                     CreatedAt = x.CreatedAt,
-                    Categories = _context.Categories.Where(c => c.Products.Any(p => p.ProductId == x.ProductId)).Select(y => new CategoryResponse
+                    Categories = x.Categories.Select(c => new CategoryResponse
                     {
-                        CategoryName = y.CategoryName,
-                        CategoryId = y.CategoryId,
-                        CreatedAt = y.CreatedAt
+                        CategoryName = c.CategoryName,
+                        CategoryId = c.CategoryId,
+                        CreatedAt = c.CreatedAt
                     }).ToList()
                 }),
                 PerPage = perPage,
@@ -62,22 +63,24 @@ namespace API.Implementation.Repositories
             if (search.Keyword != null)
                 query = query.Where(product => product.ProductName.ToLower().Contains(search.Keyword.ToLower()) || product.Description.ToLower().Contains(search.Keyword.ToLower()));
             if (search.MinPrice.HasValue)
-                query = query.Where(product => product.Price > search.MinPrice.Value);
+                query = query.Where(product => product.Price >= search.MinPrice.Value);
             if (search.MaxPrice.HasValue)
-                query = query.Where(product => product.Price < search.MaxPrice.Value);
+                query = query.Where(product => product.Price <= search.MaxPrice.Value);
             if (!search.CategoryIds.IsNullOrEmpty())
-                query = query.Where(product => product.Categories.All(category => search.CategoryIds!.Contains(category.CategoryId)));
+                query = query.Where(product => search.CategoryIds!.All(categoryId => product.Categories.Any(c => c.CategoryId == categoryId)));
             return query;
         }
         public void InsertNewProduct(ProductInsertData data)
         {
+            //Configure debugger to not break when this exception is thrown.
             _insertValidator.ValidateAndThrow(data);
+
             Product p = new Product
             {
                 ProductName = data.Name,
                 Description = data.Description,
                 Price = data.Price,
-                StockQuantity = data.StockQuantity,
+                StockQuantity = data.StockQuantity
             };
             p.Categories = BindProductCategories(data.CategoryIds);
             base.Add(p);
@@ -88,12 +91,20 @@ namespace API.Implementation.Repositories
         }
         public void UpdateProduct(ProductUpdateData data)
         {
+            //Configure debugger to not break when this exception is thrown.
             _updateValidator.ValidateAndThrow(data);
-            Product p = _context.Products.First(x=>x.ProductId == data.Id);
+
+            Product p = _context.Products.Where(x=>x.ProductId == data.Id).Include(x=>x.Categories).First();
             p.ProductName = data.Name;
             p.Price = data.Price;
             p.Description = data.Description;
-            p.Categories = BindProductCategories(data.CategoryIds);
+            List<Category> categories = BindProductCategories(data.CategoryIds);
+            foreach (Category cat in categories) {
+                if (!p.Categories.Any(c => c.CategoryId == cat.CategoryId))
+                {
+                    p.Categories.Add(cat);
+                }
+            }
             p.StockQuantity = data.StockQuantity;
             base.Update(p);
         }

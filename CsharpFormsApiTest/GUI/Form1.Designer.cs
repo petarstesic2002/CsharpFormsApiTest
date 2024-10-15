@@ -46,6 +46,7 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(155, 12);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(633, 370);
             dataGridView1.TabIndex = 0;
             // 
@@ -94,7 +96,7 @@
             label1.Name = "label1";
             label1.Size = new Size(62, 15);
             label1.TabIndex = 4;
-            label1.Text = "Page: 1 / 1";
+            label1.Text = "Page: 0 / 0";
             // 
             // textBox1
             // 
@@ -172,7 +174,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(54, 22);
+            label6.Location = new Point(47, 21);
             label6.Name = "label6";
             label6.Size = new Size(63, 15);
             label6.TabIndex = 15;
@@ -186,6 +188,7 @@
             button4.TabIndex = 16;
             button4.Text = "Add New Product";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -195,6 +198,7 @@
             button5.TabIndex = 17;
             button5.Text = "Update Selected Product";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -204,12 +208,23 @@
             button6.TabIndex = 18;
             button6.Text = "Delete Selected Product";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(159, 389);
+            label7.Name = "label7";
+            label7.Size = new Size(144, 15);
+            label7.TabIndex = 19;
+            label7.Text = "Per Page: 0, Total Count: 0";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -255,5 +270,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private Label label7;
     }
 }

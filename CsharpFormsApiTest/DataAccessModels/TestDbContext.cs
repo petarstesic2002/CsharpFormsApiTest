@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessModels;
 
-public partial class TestDbContext : Microsoft.EntityFrameworkCore.DbContext
+public partial class TestDbContext : DbContext
 {
     public TestDbContext()
     {
@@ -21,7 +21,8 @@ public partial class TestDbContext : Microsoft.EntityFrameworkCore.DbContext
     public virtual DbSet<Product> Products { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-54K3IOI\\SQLEXPRESS;Initial Catalog=CsharpFormsApiTestDb;Integrated Security=True;Trust Server Certificate=True");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-54K3IOI\\SQLEXPRESS;Initial Catalog=CsharpFormsApiTestDb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -51,14 +52,13 @@ public partial class TestDbContext : Microsoft.EntityFrameworkCore.DbContext
                     "ProductCategory",
                     r => r.HasOne<Category>().WithMany()
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("FK_ProductCategories_Categories"),
                     l => l.HasOne<Product>().WithMany()
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("FK_ProductCategories_Products"),
                     j =>
                     {
+                        j.HasKey("ProductId", "CategoryId");
                         j.ToTable("ProductCategories");
                     });
         });

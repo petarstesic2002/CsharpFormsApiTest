@@ -11,7 +11,7 @@ namespace API.Implementation.Repositories
         {
             
         }
-        public List<CategoryResponse> getCategories()
+        public List<CategoryResponse> GetCategories()
         {
             return base.GetAll().Select(x => new CategoryResponse
             {

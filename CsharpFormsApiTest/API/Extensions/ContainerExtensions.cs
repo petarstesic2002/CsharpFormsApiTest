@@ -21,6 +21,8 @@ namespace API.Extensions
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddTransient<ProductInsertValidator>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ProductInsertValidator>();
+            services.AddTransient<ProductUpdateValidator>();
         }
         public static void AddContext(this IServiceCollection services)
         {

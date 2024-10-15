@@ -1,6 +1,7 @@
 ﻿using API.Application.Dto;
 using DataAccessModels;
 using FluentValidation;
+using System.Reflection.Metadata.Ecma335;
 
 namespace API.Implementation.Validators
 {
@@ -20,7 +21,7 @@ namespace API.Implementation.Validators
 
             RuleFor(x => x.Name).NotEmpty()
                                 .WithMessage("Name is required.")
-                                .Must(CheckProductName)
+                                .Must((x, y) => CheckProductName(x.Name, x.Id))
                                 .WithMessage("Name must be unique.");
 
             RuleFor(x => x.CategoryIds).NotEmpty()
@@ -42,9 +43,9 @@ namespace API.Implementation.Validators
                 return false;
             return true;
         }
-        private bool CheckProductName(string name)
+        private bool CheckProductName(string name, int id)
         {
-            if (_context.Products.Where(x => x.ProductName.Equals(name, StringComparison.OrdinalIgnoreCase)).Any())
+            if (_context.Products.Any(x => x.ProductName.ToLower() == name.ToLower() && x.ProductId != id))
                 return false;
             return true;
         }

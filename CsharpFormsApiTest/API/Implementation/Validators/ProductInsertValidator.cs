@@ -34,7 +34,7 @@ namespace API.Implementation.Validators
         }
         private bool CheckProductName(string name)
         {
-            if (_context.Products.Where(x=>x.ProductName.Equals(name,StringComparison.OrdinalIgnoreCase)).Any())
+            if (_context.Products.Any(x=>x.ProductName.ToLower() == name.ToLower()))
                 return false;
             return true;
         }

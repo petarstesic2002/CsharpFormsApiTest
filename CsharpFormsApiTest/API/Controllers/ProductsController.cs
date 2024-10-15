@@ -16,7 +16,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Search([FromQuery] ProductSearch searchDto)
+        public IActionResult Search([FromBody] ProductSearch searchDto)
         {
             return Ok(_unitOfWork.ProductRepository.SearchWithPagination(searchDto));
         }

@@ -9,15 +9,13 @@ namespace GUI.Api
 {
     public static class Api
     {
-        private static RestClient _client;
+        private static RestClient? _client;
         public static RestClient Client
         {
             get
             {
                 if(_client == null)
-                {
                     return new RestClient();
-                }
                 return _client;
             }
         }

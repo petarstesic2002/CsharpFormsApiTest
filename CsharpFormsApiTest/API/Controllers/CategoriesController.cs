@@ -16,7 +16,7 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_unitOfWork.CategoryRepository.getCategories());
+            return Ok(_unitOfWork.CategoryRepository.GetCategories());
         }
     }
 }

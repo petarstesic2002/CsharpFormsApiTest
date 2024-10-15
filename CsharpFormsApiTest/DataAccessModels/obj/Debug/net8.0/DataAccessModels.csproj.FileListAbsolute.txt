@@ -12,3 +12,4 @@ C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccess
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.pdb
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.genruntimeconfig.cache
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\ref\DataAccessModels.dll
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\DataAccessModels\obj\Debug\net8.0\DataAccessModels.sourcelink.json

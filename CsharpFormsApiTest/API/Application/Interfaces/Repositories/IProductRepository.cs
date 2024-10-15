@@ -7,5 +7,6 @@ namespace API.Application.Interfaces.Repositories
     {
         PagedResponse<ProductWithCategories> SearchWithPagination(ProductSearch search);
         void InsertNewProduct(ProductInsertData data);
+        void UpdateProduct(ProductUpdateData data);
     }
 }

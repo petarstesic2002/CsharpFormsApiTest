@@ -77,3 +77,4 @@ C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\API\bin\De
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\API\bin\Debug\net8.0\DataAccessModels.dll
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\API\bin\Debug\net8.0\DataAccessModels.pdb
 C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Petar\Documents\GitHub\CsharpFormsApiTest\CsharpFormsApiTest\API\obj\Debug\net8.0\API.sourcelink.json
