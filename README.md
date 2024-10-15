@@ -11,4 +11,4 @@ There are `FluentValidation` validators for insert and update that throw `Valida
 ## Solution is set to multiple startup projects (API and GUI)
 
 # Start the project
-Open `GUI` and `API` projects in a separate terminal and run `dotnet run` in each or Open the solution in Visual Studio and build and start the project
+Open `GUI` and `API` projects in a separate terminal and run `dotnet run` in each one (`API FIRST!`) or Open the solution in Visual Studio and build and start the project
