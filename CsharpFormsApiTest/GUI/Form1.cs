@@ -83,6 +83,10 @@ namespace GUI
                 search.Id = id;
                 return;
             }
+            else
+            {
+                search.Id = null;
+            }
             decimal minPrice = 0;
             if (decimal.TryParse(textBox3.Text, out decimal mnP) && mnP > 0)
                 minPrice = mnP;
