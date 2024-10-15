@@ -10,10 +10,12 @@ namespace GUI
         private int _page = 0;
         private List<CategoryDto> _categories;
         private int _totalPages = 0;
+        ProductSearch _search;
         public Form1()
         {
             _apiRequest = new ApiRequest();
             _categories = GetCategories();
+            _search = new ProductSearch();
             InitializeComponent();
             checkedListBox1.Items.AddRange(GetCategoryCbList());
             SetPageLabelText();
@@ -24,9 +26,8 @@ namespace GUI
         {
             try
             {
-                ProductSearch search = new ProductSearch();
-                SetSearch(search);
-                SetProductData(search);
+                SetSearch(_search);
+                SetProductData(_search);
             }
             catch (Exception ex)
             {
@@ -65,11 +66,8 @@ namespace GUI
         }
         private void ChangePage()
         {
-            ProductSearch search = new ProductSearch
-            {
-                Page = _page
-            };
-            SetProductData(search);
+            _search.Page = _page;
+            SetProductData(_search);
         }
         private void SetPageLabelText()
         {
@@ -85,7 +83,6 @@ namespace GUI
                 search.Id = id;
                 return;
             }
-
             decimal minPrice = 0;
             if (decimal.TryParse(textBox3.Text, out decimal mnP) && mnP > 0)
                 minPrice = mnP;
@@ -97,19 +94,29 @@ namespace GUI
             string keyword = textBox1.Text;
             if (!string.IsNullOrEmpty(keyword))
                 search.Keyword = keyword;
+            else
+                search.Keyword = null;
 
             if (minPrice >= 0)
                 search.MinPrice = minPrice;
+            else
+                search.MinPrice = null;
 
             if (maxPrice > 0 && maxPrice >= minPrice)
                 search.MaxPrice = maxPrice;
+            else
+                search.MaxPrice = null;
 
             if (_page <= _totalPages && _page > 0)
                 search.Page = _page;
+            else
+                search.Page = null;
 
             List<int> checkedCatIds = checkedListBox1.CheckedItems.Cast<CategoryCheckboxItem>().ToList().Select(x => x.Id).ToList();
             if (checkedCatIds.Count > 0)
                 search.CategoryIds = checkedCatIds;
+            else
+                search.CategoryIds = null;
 
         }
         private List<CategoryDto> GetCategories()
