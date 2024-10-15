@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{54F923BE-0D00-4B49-9E36-981C751BCCB3}|API\\API.csproj|c:\\users\\petar\\documents\\github\\csharpformsapitest\\csharpformsapitest\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F923BE-0D00-4B49-9E36-981C751BCCB3}|API\\API.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|c:\\users\\petar\\documents\\github\\csharpformsapitest\\csharpformsapitest\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -19,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|solutionrelative:gui\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|c:\\users\\petar\\documents\\github\\csharpformsapitest\\csharpformsapitest\\gui\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\gui\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8D314F2-C2CF-46BE-BD4A-FD519E51AE15}|GUI\\GUI.csproj|solutionrelative:gui\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -38,15 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T13:52:17.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\API\\Implementation\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "API\\Implementation\\Repositories\\ProductRepository.cs",
@@ -54,12 +67,11 @@
               "RelativeToolTip": "API\\Implementation\\Repositories\\ProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:32:24.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T12:32:24.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AddProductForm.cs",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\AddProductForm.cs",
               "RelativeDocumentMoniker": "GUI\\AddProductForm.cs",
@@ -72,19 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddProductForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\AddProductForm.cs",
-              "RelativeDocumentMoniker": "GUI\\AddProductForm.cs",
-              "ToolTip": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\AddProductForm.cs [Design]",
-              "RelativeToolTip": "GUI\\AddProductForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:23:51.715Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\Form1.cs",
               "RelativeDocumentMoniker": "GUI\\Form1.cs",
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\Form1.cs",
               "RelativeDocumentMoniker": "GUI\\Form1.cs",
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\DataAccessModels\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "DataAccessModels\\Entities\\Product.cs",
@@ -117,12 +117,11 @@
               "RelativeToolTip": "DataAccessModels\\Entities\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:17:03.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T12:17:03.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TestDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\DataAccessModels\\TestDbContext.cs",
               "RelativeDocumentMoniker": "DataAccessModels\\TestDbContext.cs",
@@ -130,8 +129,22 @@
               "RelativeToolTip": "DataAccessModels\\TestDbContext.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAA5wBYAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T00:14:18.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T00:14:18.08Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddProductForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "GUI\\AddProductForm.cs",
+              "ToolTip": "C:\\Users\\Petar\\Documents\\GitHub\\CsharpFormsApiTest\\CsharpFormsApiTest\\GUI\\AddProductForm.cs [Design]",
+              "RelativeToolTip": "GUI\\AddProductForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T12:23:51.715Z"
             }
           ]
         }
